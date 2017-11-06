@@ -1,0 +1,107 @@
+html,body {
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  height:100%;
+}
+
+*,* :before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  animation: color 45s infinite;
+  margin: 0%;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(254, 1, 85);
+  overflow: hidden;
+}
+
+@keyframes color {
+    0% {background-color: rgb(254, 1, 85);}
+    30% {background-color: yellow;}
+    60% {background-color: aqua;}
+    80% {background-color: grey;}
+    100% {background-color: rgb(254, 1, 85);}
+}
+
+@keyframes shortDistanceBurst {
+  0%{
+    width:0px;
+    height:0px;
+    opacity: 1;
+    transform:rotate(0deg);
+  }
+  80%{
+    opacity: 0.5;
+  }
+  100%{
+    width:1250px;
+    height:1250px;
+    opacity: 0;
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes longDistanceBurst {
+  0%{
+    width:0px;
+    height:0px;
+    opacity: 1;
+    transform:rotate(0deg);
+  }
+  80%{
+    opacity: 0.5;
+  }
+  100%{
+    width:2250px;
+    height:2250px;
+    opacity: 0;
+    transform:rotate(360deg);
+  }
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+
+/*.burst1{
+  position: absolute;
+  animation: foreverBurst 20s linear;
+  animation-fill-mode: forwards;
+}*/
+
+.burstShort{
+  position: absolute;
+  animation: shortDistanceBurst 5s linear;
+  animation-fill-mode: forwards;
+}
+
+.burstLong{
+  position: absolute;
+  animation: longDistanceBurst 5s linear;
+  animation-fill-mode: forwards;
+}
+
+.icons{
+  height:500px;
+  width:500px;
+}
+
+.button{
+  height:25px;
+  width:25px;
+}
+
+.iconMargin{
+  position: absolute;
+  transform: translateX(125%);
+  vertical-align: center;
+  /*margin-left: -10px;*/
+  height: 50px;
+}
